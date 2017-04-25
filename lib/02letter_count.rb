@@ -6,3 +6,13 @@
 # letter_count('banana')
 #
 # > {"b" => 1, "a" => 3, "n" => 2}
+
+def letter_count(string)
+  counts = Hash.new(0)
+  string.each_char do |letter|
+    counts[letter] += 1
+  end
+  return counts
+end
+
+p letter_count('banana')
